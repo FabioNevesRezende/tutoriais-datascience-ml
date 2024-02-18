@@ -44,10 +44,9 @@ df2023_counts = df2023.groupby('VAX_TYPE').value_counts().sort_values(ascending=
 
 print(df2023_counts.head())
 
-fig, axs = plt.subplots(nrows=1, ncols=2)
+fig, axs = plt.subplots(nrows=1, ncols=2, figsize=(10,5))
 
 axs[0].bar(df2018_counts['VAX_TYPE'], df2018_counts['counts'])
 axs[1].bar(df2023_counts['VAX_TYPE'], df2023_counts['counts'])
 
-fig = plt.figure(figsize = (10,5))
 plt.show()
